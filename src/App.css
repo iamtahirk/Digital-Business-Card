@@ -1,41 +1,231 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100vh;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+
+/* Info Section */
+.card {
+  width: 32rem;
+  margin: 0 auto;
+  background-color: #1A1B21;
+  border-radius: 1rem;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.1rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.infocontainer {
+  padding: 0 3.5rem;
+}
+
+.name {
+  font-size: 2.95rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  color: #ffffff;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.jobtitle  {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: .8rem;
+  color: #F3BF99;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.website  {
+  font-size: 1.35rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 1.6rem;
+  color: #F5F5F5;
+}
+
+.website a:link {
+  text-decoration: none;
+}
+.website a:link,
+.website a:visited {
+  color: #F5F5F5;
+}
+
+.website a:hover {
+  color: #dadada;
+}
+.website a:active {
+  color: #fcfcfc
+}
+
+.btn-container {
+  display: flex;
+  padding-top: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .8rem 0;
+  box-shadow: 0px .1rem .2rem rgba(0, 0, 0, 0.05);
+  border-radius: .6rem;
+  width: 11.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.btn img {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: .8rem;
+}
+
+.btn-white {
+  color: #374151;
+  background-color: #ffffff;
+  border: .1rem solid #D1D5DB;
+}
+
+.btn-blue {
+  color: #ffffff;
+  background-color: #5093E2;
+  border: .1rem solid #407cc0;
+}
+
+.btn a:link,
+.btn a:visited,
+.btn a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn:hover {
+  transform: scale(1.06);
+}
+
+
+/* About/Interests Component */
+.about-container {
+  margin: 3.3rem 3.05rem .8rem;
+}
+
+.about-title {
+  font-size: 1.75rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  color: #F5F5F5;
+}
+
+.about-para {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  text-align: left;
+  color: #DCDCDC;
+  padding-top: 1rem;
+  padding-bottom: 2.4rem;
+}
+
+/* Footer Component */
+.footer-container  {
+  background-color: #161619;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.footer-icons {
+  width: 2.5rem;
+  height: auto;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-icons:hover {
+    transform: scale(1.1) rotate(360deg);
+}
+
+@media (prefers-color-scheme: light) {
+  .card {
+    background-color: #f5f5f5;
   }
-  to {
-    transform: rotate(360deg);
+
+  .name {
+    color: #2B283A;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .jobtitle  {
+    color: #F47D27;
   }
-}
+  
+  .website  {
+    color: #4A4E74;
+  }
 
-.card {
-  padding: 2em;
-}
+  .website a:link,
+  .website a:visited {
+    color: #4A4E74;
+  }
 
-.read-the-docs {
-  color: #888;
+  .website a:hover {
+    color: #383b5c;
+  }
+  .website a:active {
+    color: #555a85
+  }
+  .about-title {
+    color: #2B283A;
+  }
+  
+  .about-para {
+    color: #4A4E74;
+  }
+  .footer-container {
+    background-color: #D5D4D8;
+  }
 }
