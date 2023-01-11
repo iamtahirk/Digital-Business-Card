@@ -19,7 +19,7 @@ The project has support for both dark and light themes, which automatically swit
 1. Clone the repository
 
 ```sh
-git clone https://github.com/your-username/digital-business-card.git
+git clone https://github.com/iamtahirk/Digital-Business-Card.git
 ```
 
 2. Install the dependencies
